@@ -4,3 +4,5 @@ tmp/**/*
 config/database.yml
 db/*.sqlite3
 config/initializers/setup_mail.rb
+Gemfile.lock
+
