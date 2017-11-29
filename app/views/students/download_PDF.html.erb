@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <!-- All Students Details -->
+ 
+<!--  
+<h1>All Student DetailsAll Students Details</h1>
+<% @students.each do |student| %>
+  <div class="container">
+    <h2><%=student.Name%> Details: </h2>
+    <div class="table-responsive panel">
+      <table class="table">
+          <tbody>
+                  <tr>
+                      <td class="text-success"><i class="fa fa-user"></i> Email</td>
+                      <td><%=student.email%></td>
+                  </tr>
+                  <tr>
+                      <td class="text-success"><i class="fa fa-list-ol"></i> DOB</td>
+                      <td><%=student.DOB%></td>
+                  </tr>
+                  <tr>
+                      <td class="text-success"><i class="fa fa-book"></i> Phone_No</td>
+                      <td><%=student.Phone_No%></td>
+                  </tr>
+                  <tr>
+                      <td class="text-success"><i class="fa fa-group"></i> Course</td>
+                      <td><%=student.course.name%></td>
+                  </tr>                    
+          </tbody>
+      </table>
+    </div>
+  </div>
+   <hr class="hr-primary">
+<%end %>
+ -->
+
+<!-- Selected Student Details -->
+<div class="container"> 
+  <h2><%=@student.Name%> Details: </h2> 
+  <div class="table-responsive panel">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td class="text-success"><i class="fa fa-user"></i>Email</td>
+          <td><%=@student.email%></td>
+        </tr>
+        <tr>
+          <td class="text-success"><i class="fa fa-user"></i>DOB</td>
+          <td><%=@student.DOB%></td>
+        </tr>
+        <tr>
+          <td class="text-success"><i class="fa fa-user"></i>Phone_No</td>
+          <td><%=@student.Phone_No%></td>
+        </tr>
+        <tr>
+          <td class="text-success"><i class="fa fa-user"></i>Course</td>
+          <td><%=@student.course.name%></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </body>
+</html>
+
+
+
+

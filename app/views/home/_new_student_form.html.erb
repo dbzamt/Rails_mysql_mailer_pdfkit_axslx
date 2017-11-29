@@ -1,0 +1,71 @@
+ <div id="addstudentmodal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 id="modalTitle" class="modal-title">Add Student</h4>
+                </div>
+                <%= form_for :students,url:'/students',html:{class:"form-horizontal"} do %>
+
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="Name" class="col-sm-3" control-label">Name : </label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Name" placeholder="Name" name="student[Name]">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                          <label for="DOB" class="col-sm-3">DOB:</label>
+                              <div class="col-sm-9">
+                                <input class="form-control" type="date"  id="DOB" name="student[DOB]">
+                              </div>
+                        </div>
+                        
+
+                         <div class="form-group">
+                            <label for="Mobile" class="col-sm-3" control-label>Mobile No:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Mobile" name="student[Phone_No]">
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label for="email" class="col-sm-3" control-label>email:</label>
+                            <div class="col-sm-9">
+                                <input type="email" id="email" name="student[email]" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Courses" class="col-sm-3">Courses:</label>
+                            <div class="col-sm-9">
+                              <select class="form-control" id="Courses" class="col-sm-9" name="course[id]">
+
+
+                                <% @courses.each do |c|%>
+
+                                
+                                <option value = "<%= c.id %>" > <%=c.name%> </option>
+                                
+                                <%end%>
+                              </select>
+
+
+
+
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   <button type="Submit" class="btn btn-primary">Submit</button>
+                </div>
+
+                <% end%>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
